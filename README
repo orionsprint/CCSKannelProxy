@@ -1,0 +1,11 @@
+This project should work with kannel as :
+	http smsc ,with allowed smsc = sncheck_linkXX, queue_linkXX
+	take messages and do proper mangle i.e change sender and then resend it again to origin link through the orign smsbox (should take the proxy-smsbox and proxy send-sms user setting from kannel.conf)
+
+Sample proxy config
+	1. main conf
+	2.conf dir
+	(i.e linkXX.conf)
+		allowed-senders = "sender1;sender2;sender3;"
+		mangled-sender = "SMS" # applied when not match any of above.
+		
